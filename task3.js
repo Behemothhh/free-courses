@@ -1,6 +1,6 @@
 function sortArr(sentence) {
-  const vowels = 'aeiouy';
-  const consonants = 'bcdfghjklmnpqrstvwx';
+  const vowels = 'aeiouyаеёиоуыэюя';
+  const consonants = 'qwrtpsdfghjklzxcvbnmйцкнгшщзхъфвпрлджчсмтьб';
   const numbers = '1234567890';
   const answerArr = ['', '', ''];
 

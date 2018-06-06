@@ -1,17 +1,14 @@
 function fib(num) {
   num = Number.parseInt(num);
-  if (num <= 0) {
-    return 0;
-  }
-
+  const absNum = Math.abs(num);
   const fibArray = [0, 1];
 
-  while(fibArray.length !== num + 1) {
+  while(fibArray.length <= absNum) {
     const arrLength = fibArray.length;
     fibArray[arrLength] = fibArray[arrLength - 1] + fibArray[arrLength - 2];
   }
 
-  return fibArray[fibArray.length - 1];
+  return num < 0 ? -fibArray[absNum] : fibArray[absNum];
 }
 
 process.stdout.write(fib(process.argv[2]).toString());

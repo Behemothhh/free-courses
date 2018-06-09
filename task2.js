@@ -1,4 +1,5 @@
 function fib(num) {
+  num = Number.parseInt(num);
   const absNum = Math.abs(num);
   const fibArray = ['0', '1'];
 
@@ -7,7 +8,7 @@ function fib(num) {
     fibArray[arrLength] = sum(fibArray[arrLength - 1], fibArray[arrLength - 2]);
   }
 
-  return num < 0 ? -fibArray[absNum] : fibArray[absNum];
+  return num < 0 ? '-' + fibArray[absNum] : fibArray[absNum];
 }
 
 function sum(num1, num2) {
@@ -27,4 +28,4 @@ function sum(num1, num2) {
   return answerArr.reverse().join('');
 }
 
-process.stdout.write(fib(process.argv[2]).toString());
+process.stdout.write(fib(process.argv[2]));
